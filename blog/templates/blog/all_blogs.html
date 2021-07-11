@@ -1,0 +1,11 @@
+<h5> Welcome to my Webb Telescope blog! </h5>
+
+
+{% for entry in entries %}
+
+<h2> {{ entry.title }} </h2>
+<h3> {{ entry.date }} </h3>
+<img src="{{ entry.image }}">
+<p> {{ entry.text }}</p>
+
+{% endfor %}
