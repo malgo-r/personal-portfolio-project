@@ -1,0 +1,12 @@
+<h5> This is my home page! </h5>
+
+{% for project in projects %} <!-- % tells us that there is some logic -->
+
+<h2> {{ project.title }} </h2>
+<p> {{ project.description }} </p>
+<img src="{{ project.image }}" height="300">
+{% if project.url %}
+<a href="{{ project.url }}">Link</a>
+{% endif %}
+
+{% endfor %}
