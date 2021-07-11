@@ -1,11 +1,22 @@
+
+{% extends 'portfolio/base.html' %}
+{% block content %}
+
 <h5> Welcome to my Webb Telescope blog! </h5>
 
+<h2> Gosia has written {{ blogs.count }} blog{{ blogs.count|pluralize }} </h2>
 
-{% for entry in entries %}
+{% for blog in blogs %}
 
-<h2> {{ entry.title }} </h2>
-<h3> {{ entry.date }} </h3>
-<img src="{{ entry.image }}">
-<p> {{ entry.text }}</p>
+<a href="{% url 'blog:detail' blog.id %}"><h2> {{ blog.title }} </h2></a>a>  # detail is the name from url.py
+<h3> {{ blog.date|date:"M d Y"|upper }} </h3>
+
+{% if blog.image %}
+<img src="{{ blog.image.url }}">
+{% endif %}
+
+<p> {{ blog.text|striptags|truncatechars:100 }}</p>
 
 {% endfor %}
+
+{% endblock %}
