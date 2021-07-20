@@ -1,0 +1,117 @@
+{
+  "_args": [
+    [
+      "startbootstrap-freelancer",
+      "/home/gosia/PycharmProjects/pp_venv/personal_portfolio-project"
+    ]
+  ],
+  "_from": "startbootstrap-freelancer@latest",
+  "_hasShrinkwrap": false,
+  "_id": "startbootstrap-freelancer@7.0.3",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/startbootstrap-freelancer",
+  "_nodeVersion": "14.17.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/startbootstrap-freelancer_7.0.3_1624909407947_0.9001334804399386"
+  },
+  "_npmUser": {
+    "email": "feedback@startbootstrap.com",
+    "name": "startbootstrap"
+  },
+  "_npmVersion": "6.14.13",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "startbootstrap-freelancer",
+    "raw": "startbootstrap-freelancer",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/startbootstrap-freelancer/-/startbootstrap-freelancer-7.0.3.tgz",
+  "_shasum": "10c4cc3b6bf90d274919d42a9fd10d61b0f8cbc6",
+  "_shrinkwrap": null,
+  "_spec": "startbootstrap-freelancer",
+  "_where": "/home/gosia/PycharmProjects/pp_venv/personal_portfolio-project",
+  "author": {
+    "name": "Start Bootstrap"
+  },
+  "bugs": {
+    "email": "feedback@startbootstrap.com",
+    "url": "https://github.com/StartBootstrap/startbootstrap-freelancer/issues"
+  },
+  "contributors": [
+    {
+      "name": "David Miller",
+      "url": "https://davidmiller.io/"
+    }
+  ],
+  "dependencies": {
+    "bootstrap": "5.0.2"
+  },
+  "description": "A freelancer portfolio HTML theme for Bootstrap.",
+  "devDependencies": {
+    "autoprefixer": "10.2.6",
+    "browser-sync": "2.27.3",
+    "chokidar": "3.5.2",
+    "concurrently": "6.2.0",
+    "postcss": "8.3.5",
+    "prettier": "2.3.2",
+    "pug": "3.0.2",
+    "sass": "1.35.1",
+    "shelljs": "0.8.4",
+    "upath": "2.0.1"
+  },
+  "directories": {},
+  "dist": {
+    "fileCount": 58,
+    "integrity": "sha512-Ndm95T7wnwPSURS1dISyH3WD3WHa3t+42ZbgizlnJNzy/3EPPu09cfOLVrNNIJo7m9NOXMX5dr7eesbQiHJH9Q==",
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJg2iZgCRA9TVsSAnZWagAAYG0P/jQye9bcZhcZY6KrOKy0\nYEqndmbcl4ByfhfdsD7ih8H9/jC1hGgm/JxFytfEtNipnuQGwJ2FuFfs0wTU\n9CopElaogbu9oA40lgW8L/MalBT+RDCiECx6gZYZaeMtHhritOSZERUtF2CO\ntakRJyEoxyksD5iYe9o3mbR1gE9Pq7Bfp2JcmHPUC/4lHOSl/3ICmWY3Qt3w\nirOA7faPyLsIfYFYpvcjtV1e6vlXNokhHjlpCfyEsmCFna1OqyJZWIXD90dx\nYRKMbUBCaRDWYMtslD1r/lLTLK5xq6yNWCobkENugtxqDJLIUV6selXsCyA+\nBPzsDwrv3z1fEvXpdqSimks+kcwCn2IogeDUqVToZ223uo8ZdnBaLjBdglk2\nDEYePlwg7QMEmhpf8pKmQLq6DoF8ncK9cZsM2IdJwLGdzJhfEqqnvNeT6PWF\nJaBOCglpWfTr1ymwEUcb/lIVMEYRfDzVI6slgvYNdVS6UFMYuQj/YFKrXaXd\nTDv5uoWxcEqNQTi1FKtpdzuPwB3ogNtckdgaSCsKUAA47bGQzZZBzKalpvn/\nC4xD4hA2O1mTefi8dOy3LlWVKhB3LLavQcztuCa8Fg37S/L/oGb4uwrlJlvC\nW4jnd5HwGY1MNkkAN/S1lUyYbifo75hAToWY4zBtDkl95vqAxSepKLkmBRvN\nXtG/\r\n=0i+D\r\n-----END PGP SIGNATURE-----\r\n",
+    "shasum": "10c4cc3b6bf90d274919d42a9fd10d61b0f8cbc6",
+    "tarball": "https://registry.npmjs.org/startbootstrap-freelancer/-/startbootstrap-freelancer-7.0.3.tgz",
+    "unpackedSize": 658816
+  },
+  "gitHead": "6bf1923156d5f9c5429a645b47f6b9fcd4af88b8",
+  "homepage": "https://startbootstrap.com/theme/freelancer",
+  "keywords": [
+    "css",
+    "html",
+    "pug",
+    "responsive",
+    "sass",
+    "scss",
+    "template",
+    "theme"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "startbootstrap",
+      "email": "feedback@startbootstrap.com"
+    }
+  ],
+  "name": "startbootstrap-freelancer",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StartBootstrap/startbootstrap-freelancer.git"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
+    "build:assets": "node scripts/build-assets.js",
+    "build:pug": "node scripts/build-pug.js",
+    "build:scripts": "node scripts/build-scripts.js",
+    "build:scss": "node scripts/build-scss.js",
+    "clean": "node scripts/clean.js",
+    "start": "npm run build && node scripts/start.js",
+    "start:debug": "npm run build && node scripts/start-debug.js"
+  },
+  "title": "Freelancer",
+  "version": "7.0.3"
+}
