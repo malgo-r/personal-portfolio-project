@@ -1,22 +1,52 @@
-
 {% extends 'portfolio/base.html' %}
 {% block content %}
 
-<h5> Welcome to my Webb Telescope blog! </h5>
+<!-- Masthead-->
+<header class="masthead bg-primary text-white-center">
+    <div class="container d-flex align-items-center flex-column">
+        <!-- Masthead Heading-->
+        <h1 class="masthead-heading text-uppercase mb-0">Radio Frequency</h1>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Masthead Subheading-->
+        <p class="masthead-subheading font-weight-light mb-0"></p>
+    </div>
+</header>
+<body>
+<!--All blogs section-->
+<!--<section class="page-section portfolio" id="portfolio">-->
+<div class="container">
+    {% for blog in blogs %}
+    <div class="row">
 
-<h2> Gosia has written {{ blogs.count }} blog{{ blogs.count|pluralize }} </h2>
+        <div class="col gy-5">
 
-{% for blog in blogs %}
+            <div class="p-3 border rounded bg-light">
+                <div class="text-center">
+                    {% if blog.image %}
 
-<a href="{% url 'blog:detail' blog.id %}"><h2> {{ blog.title }} </h2></a>a>  # detail is the name from url.py
-<h3> {{ blog.date|date:"M d Y"|upper }} </h3>
+                    <img class="rounded mx-auto d-block" src="{{ blog.image.url }}" height="550px" width="800px">
+                    {% endif %}
+                </div>
+                <h1>
+                    <a class="text-decoration-none" href="{% url 'blog:detail' blog.id %}">
+                        {{ blog.title }}
+                    </a>
+                </h1>  <!--  detail is the name from url.py -->
+                <h4> {{ blog.date|date:"M d Y"|upper }} </h4>
+                <p> {{ blog.text|striptags|truncatechars:100 }}</p>
+            </div>
 
-{% if blog.image %}
-<img src="{{ blog.image.url }}">
-{% endif %}
 
-<p> {{ blog.text|striptags|truncatechars:100 }}</p>
+        </div>
 
-{% endfor %}
-
+    </div>
+    {% endfor %}
+</div>
+<!--</section>-->
+</body>
 {% endblock %}

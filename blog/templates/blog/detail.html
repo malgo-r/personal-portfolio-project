@@ -1,13 +1,36 @@
 {% extends 'portfolio/base.html' %}
 {% block content %}
 
-<h1>{{ blog.title }}</h1>
+<!-- Masthead-->
+<header class="masthead bg-primary text-white">
 
-<h2>{{ blog.date|date:'F jS Y' }}</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 text-end">
+                <!-- Blog title -->
+                <h1 class="masthead-heading text-uppercase">{{ blog.title }}</h1>
+                <div class="dropdown-divider"></div>
+                <!-- Blog creation date -->
+                <p class="masthead-subheading font-weight-light mb-0">{{ blog.date|date:'F jS Y' }}
+                    <!-- calendar icon -->
+                    <i class="far fa-calendar-alt"></i>
+                </p>
+            </div>
+            <div class="col-lg-6">
+                {% if blog.image %}
+                <img class=" rounded" width="600" src="{{ blog.image.url }}">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</header>
+<body>
 
-{% if blog.image %}
-<img src="{{ blog.image.url }}" height="350">
-{% endif %}
-<p>{{ blog.text|safe }}</p>
 
+<section class="page-section">
+    <div class="container">
+        <p class="text-body">{{ blog.text|safe }}</p>
+    </div>
+</section>
+</body>
 {% endblock %}
