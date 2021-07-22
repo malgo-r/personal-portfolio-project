@@ -18,35 +18,32 @@
 </header>
 <body>
 <!--All blogs section-->
-<!--<section class="page-section portfolio" id="portfolio">-->
-<div class="container">
-    {% for blog in blogs %}
-    <div class="row">
+<section class="page-section portfolio" id="portfolio">
+    {% load static %}
+    <div class="container">
+        <!-- Portfolio Grid Items-->
+        <div class="row justify-content-start">
+            {% for blog in blogs %}
+            <!-- Portfolio Item-->
+            <div class="col-lg-4 picture">
+                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
 
-        <div class="col gy-5">
+                    <h1>
+                        <a class="text-decoration-none" href="{% url 'blog:detail' blog.id %}">
+                            {{ blog.title }}
+                        </a>
+                    </h1>
 
-            <div class="p-3 border rounded bg-light">
-                <div class="text-center">
-                    {% if blog.image %}
+                    <img class="img-fluid rounded" src="{{ blog.image.url }}" height="300">
 
-                    <img class="rounded mx-auto d-block" src="{{ blog.image.url }}" height="550px" width="800px">
-                    {% endif %}
+                    <h5> {{ blog.date|date:"M d Y"|upper }} </h5>
+                    <p> {{ blog.text|striptags|truncatechars:100 }}</p>
+
                 </div>
-                <h1>
-                    <a class="text-decoration-none" href="{% url 'blog:detail' blog.id %}">
-                        {{ blog.title }}
-                    </a>
-                </h1>  <!--  detail is the name from url.py -->
-                <h4> {{ blog.date|date:"M d Y"|upper }} </h4>
-                <p> {{ blog.text|striptags|truncatechars:100 }}</p>
             </div>
-
-
+            {% endfor %}
         </div>
-
     </div>
-    {% endfor %}
-</div>
-<!--</section>-->
+</section>
 </body>
 {% endblock %}
